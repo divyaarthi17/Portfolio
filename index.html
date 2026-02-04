@@ -111,7 +111,7 @@
     <div class="experience-card">
         <h3>Certificates</h3>
         <ul class="cert-list">
-            <li><a href="#cert1" onclick="handleCert(event,'cert1')">Basics of Data Science</a></li>
+            <li><a href="#cert1" onclick="event.preventDefault()">Basics of Data Science</a></li>
             <li><a href="#cert2" onclick="handleCert(event,'cert2')">Introduction to Artificial Intelligence</a></li>
             <li><a href="#cert3" onclick="handleCert(event,'cert3')">Python Programming</a></li>
             <li><a href="#cert4" onclick="handleCert(event,'cert4')">Fundamentals of Data Structures in C</a></li>
@@ -178,3 +178,4 @@ document.querySelector(".contact-form").addEventListener("submit", function(e){
 
 </body>
 </html>
+
