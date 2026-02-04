@@ -227,9 +227,69 @@ body {
     margin-bottom: 25px;
 }
 
-.cert-list {
-    padding-left: 20px;
+.cert-list li {
+    margin-bottom: 8px;
 }
+
+.cert-list a {
+    text-decoration: none;
+    color: #7f3df0;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.cert-list a:hover {
+    color: #ff4fcf;
+    text-decoration: underline;
+}
+
+/* Modal base */
+.cert-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+
+    z-index: 9999;   /* 🔥 HIGH VALUE */
+}
+
+
+/* Show modal when targeted */
+.cert-modal:target {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Certificate image */
+.cert-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.3);
+}
+
+.close-btn {
+    position: fixed;        /* 🔥 NOT absolute */
+    top: 20px;
+    right: 25px;
+    font-size: 42px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 10000;         /* 🔥 ABOVE EVERYTHING */
+}
+
+.close-btn:hover {
+    color: #ff4fcf;
+    transform: scale(1.1);
+}
+
+
 
 /* CONTACT */
 .contact-form {
@@ -265,7 +325,10 @@ body {
     transform: translateY(4px);
     box-shadow: 0 3px 0 #2f123a;
 }
-
+.project-link {
+    text-decoration: none;
+    color: inherit;
+}
 
 #success-msg {
     display: none;
