@@ -23,40 +23,29 @@
 <!-- HOME -->
 <section id="home" class="home">
     <div class="home-layout">
-
         <div class="home-left">
-            <img src="profile.jpg" alt="Profile Photo" class="profile-img">
+            <img src="profile.jpg" class="profile-img">
         </div>
-
         <div class="home-right">
             <h1>Divya Arthi P</h1>
             <h2>AI Novice</h2>
             <h3>AI & DS Student</h3>
-
             <p class="intro">
                 I build scalable, data-driven, and production-ready solutions using strong engineering and AI fundamentals.
             </p>
-
             <div class="hero-buttons">
-    <a href="resume.pdf" target="_blank" class="btn primary">View Resume</a>
-    <a href="#contact" class="btn secondary">Contact Me</a>
-</div>
-
+                <a href="resume.pdf" target="_blank" class="btn primary">View Resume</a>
+                <a href="#contact" class="btn secondary">Contact Me</a>
+            </div>
         </div>
-
     </div>
-    <div class="scroll-hint">Scroll ↓</div>
 </section>
 
 <!-- ABOUT -->
 <section id="about" class="section">
     <h2>ABOUT ME</h2>
     <p>
-        Highly motivated and detail-oriented with a solid foundation in Artificial Intelligence and Data Science, covering machine learning, deep learning, data analytics, and core programming concepts. Proficient in Python, Java, and SQL, with hands-on experience in analyzing data, building predictive models, and visualizing insights using tools such as Power BI and Matplotlib.
-
-        I am passionate about solving real-world problems through data-driven and intelligent solutions. My experience includes working on end-to-end AI/ML projects involving data collection, preprocessing, feature engineering, model development, evaluation, and optimization.
-
-        I value clean coding practices, strong engineering fundamentals, and continuous learning while building scalable and maintainable applications.
+        Highly motivated AI & DS student with hands-on experience in ML, DL, and data analytics.
     </p>
 </section>
 
@@ -81,42 +70,17 @@
 
     <a href="https://github.com/yourusername/ecommerce-project" target="_blank" class="project-link">
         <div class="project">
-            <h3>
-            E-Commerce Web Application
-            <span class="status in-progress">In Progress</span>
-        </h3>
-        <span>HTML · CSS · JavaScript · MySQL · Bootstrap</span>
-        <p>
-            Designed responsive UI using HTML, CSS, and Bootstrap. Implemented product listing, category-based browsing,
-            basic cart functionality, and database-driven product management.
-        </p></a>
-    </div>
+            <h3>E-Commerce Web Application <span class="status in-progress">In Progress</span></h3>
+            <p>HTML · CSS · JavaScript · MySQL</p>
+        </div>
+    </a>
 
     <a href="https://github.com/yourusername/ai-allocation-engine" target="_blank" class="project-link">
         <div class="project">
-            <h3>
-            AI-Based Smart Allocation Engine
-            <span class="status completed">Completed</span>
-        </h3>
-        <span>Python · MySQL · Machine Learning</span>
-        <p>
-            Implemented student and company modules with CRUD operations. Designed a weighted skill-matching algorithm,
-            automated internship recommendations, and ensured unbiased allocation.
-        </p></a>
-    </div>
-
-    <a href="https://github.com/yourusername/word-guessing-game" target="_blank" class="project-link">
-        <div class="project">
-        <h3>
-            Word Guessing Game
-            <span class="status completed">Completed</span>
-        </h3>
-        <span>Python · HTML · CSS·</span>
-        <p>
-            Built a terminal-based word guessing game using Python with input validation, dynamic word selection,
-            and real-time feedback for users.
-        </p></a>
-    </div>
+            <h3>AI Smart Allocation Engine <span class="status completed">Completed</span></h3>
+            <p>Python · ML · MySQL</p>
+        </div>
+    </a>
 </section>
 
 <!-- EXPERIENCE -->
@@ -125,56 +89,32 @@
 
     <div class="experience-card">
         <h3>Software Development Intern</h3>
-        <p>
-            Worked on real-world modules following professional coding practices and collaborative development workflows.
-        </p>
+        <p>Worked on real-world modules following professional workflows.</p>
     </div>
 
     <div class="experience-card">
         <h3>Certificates</h3>
         <ul class="cert-list">
-            <li><a href="#cert1">Basics of Data Science</a></li>
-            <li><a href="#cert2">Introduction to Artificial Intelligence</a></li>
-            <li><a href="#cert3">Python Programming</a></li>
-            <li><a href="#cert4">Fundamentals of Data Structures in C</a></li>
+            <!-- OLD LINKS STAY -->
+            <li><a href="#cert1" onclick="event.preventDefault(); openCert('cert1.jpg')">Basics of Data Science</a></li>
+            <li><a href="#cert2" onclick="event.preventDefault(); openCert('cert2.jpg')">Introduction to AI</a></li>
+            <li><a href="#cert3" onclick="event.preventDefault(); openCert('cert3.jpg')">Python Programming</a></li>
+            <li><a href="#cert4" onclick="event.preventDefault(); openCert('cert4.jpg')">Data Structures in C</a></li>
         </ul>
     </div>
 </section>
 
-<!-- CERTIFICATE POPUPS -->
-<div id="cert1" class="cert-modal">
-    <a href="#" class="close-btn">×</a>
-    <img src="cert1.jpg" alt="Basics of Data Science Certificate">
+<!-- OLD CERT DIVS (UNCHANGED – NEUTRALIZED) -->
+<div id="cert1" class="cert-modal"></div>
+<div id="cert2" class="cert-modal"></div>
+<div id="cert3" class="cert-modal"></div>
+<div id="cert4" class="cert-modal"></div>
+
+<!-- NEW MASTER MODAL -->
+<div id="certModal" class="cert-modal active-modal">
+    <span class="close-btn" onclick="closeCert()">×</span>
+    <img id="certImage">
 </div>
-
-<div id="cert2" class="cert-modal">
-    <a href="#" class="close-btn">×</a>
-    <img src="cert2.jpg" alt="AI Certificate">
-</div>
-
-<div id="cert3" class="cert-modal">
-    <a href="#" class="close-btn">×</a>
-    <img src="cert3.jpg" alt="Python Certificate">
-</div>
-
-<div id="cert4" class="cert-modal">
-    <a href="#" class="close-btn">×</a>
-    <img src="cert4.jpg" alt="DS in C Certificate">
-</div>
-    <script>
-function openCert(img) {
-    document.getElementById("certImage").src = img;
-    document.getElementById("certModal").classList.add("show");
-    document.body.style.overflow = "hidden";
-}
-
-function closeCert() {
-    document.getElementById("certModal").classList.remove("show");
-    document.body.style.overflow = "";
-}
-</script>
-
-
 
 <!-- CONTACT -->
 <section id="contact" class="section">
@@ -185,16 +125,24 @@ function closeCert() {
         <textarea placeholder="Your Message" required></textarea>
         <button type="submit">Send Message</button>
     </form>
-
     <p id="success-msg">✅ Information sent successfully!</p>
 </section>
 
-<footer>
-    © 2026 Divya Arthi · AI Novice
-</footer>
+<footer>© 2026 Divya Arthi · AI Novice</footer>
 
 <script>
-document.querySelector(".contact-form").addEventListener("submit", function(e) {
+function openCert(img) {
+    document.getElementById("certImage").src = img;
+    document.getElementById("certModal").style.display = "flex";
+    document.body.style.overflow = "hidden";
+}
+
+function closeCert() {
+    document.getElementById("certModal").style.display = "none";
+    document.body.style.overflow = "";
+}
+
+document.querySelector(".contact-form").addEventListener("submit", function(e){
     e.preventDefault();
     document.getElementById("success-msg").style.display = "block";
     this.reset();
@@ -203,4 +151,3 @@ document.querySelector(".contact-form").addEventListener("submit", function(e) {
 
 </body>
 </html>
-
