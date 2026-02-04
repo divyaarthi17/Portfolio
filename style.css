@@ -274,21 +274,27 @@ body {
     object-fit: contain;
 }
 
-
 .close-btn {
-    position: fixed;        /* 🔥 NOT absolute */
+    position: fixed;
     top: 20px;
     right: 25px;
     font-size: 42px;
     color: #fff;
-    text-decoration: none;
     cursor: pointer;
-    z-index: 10000;         /* 🔥 ABOVE EVERYTHING */
+    z-index: 10000;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .close-btn:hover {
     color: #ff4fcf;
     transform: scale(1.1);
+}
+
+/* PREVENT FOCUS JUMP */
+a:focus {
+    outline: none;
 }
 
 
@@ -345,6 +351,7 @@ footer {
     text-align: center;
     padding: 18px;
 }
+
 
 
 
