@@ -161,6 +161,19 @@
     <a href="#" class="close-btn">×</a>
     <img src="cert4.jpg" alt="DS in C Certificate">
 </div>
+    <script>
+function openCert(img) {
+    document.getElementById("certImage").src = img;
+    document.getElementById("certModal").classList.add("show");
+    document.body.style.overflow = "hidden";
+}
+
+function closeCert() {
+    document.getElementById("certModal").classList.remove("show");
+    document.body.style.overflow = "";
+}
+</script>
+
 
 
 <!-- CONTACT -->
@@ -190,3 +203,4 @@ document.querySelector(".contact-form").addEventListener("submit", function(e) {
 
 </body>
 </html>
+
