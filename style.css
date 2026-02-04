@@ -246,16 +246,19 @@ body {
 /* Modal base */
 .cert-modal {
     position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    display: flex;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.9);
+
+    display: none;
     justify-content: center;
     align-items: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.4s ease;
 
-    z-index: 9999;   /* 🔥 HIGH VALUE */
+    z-index: 9999;
+    padding: 20px;
 }
 
 
@@ -343,3 +346,4 @@ footer {
     text-align: center;
     padding: 18px;
 }
+
