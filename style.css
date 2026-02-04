@@ -279,7 +279,7 @@ body {
     top: 20px;
     right: 25px;
     font-size: 42px;
-    color: #ff4fcf;
+    color: #f3e8ff;
     cursor: pointer;
     z-index: 10000;
     background: none;
@@ -351,6 +351,7 @@ footer {
     text-align: center;
     padding: 18px;
 }
+
 
 
 
